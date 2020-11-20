@@ -1,7 +1,7 @@
 #header {
     text-decoration: none;
     background-color: #434758;
-    color: #afdf00;
+    color: #c8df00;
     font-family: "Overpass";
     font-size: 30px;
     padding: 13px 13px 10px 13px;
@@ -21,7 +21,7 @@
 	clear: both;
     color: #efd8ff;
 	overflow: hidden;
-	background-color: #afdf00;
+	background-color: #c8df00;
 	padding: 0.7ex;
 }
 
@@ -33,7 +33,7 @@
 	width: 200px;
     text-decoration: none;
     background-color: #434758;
-    color: #afdf00;
+    color: #c8df00;
     font-family: "Overpass";
 }
 
