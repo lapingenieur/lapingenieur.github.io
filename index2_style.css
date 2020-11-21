@@ -25,16 +25,23 @@
 	padding: 0.7ex;
 }
 
+#menu a {
+    color: #22232D;
+}
+
 #nav {
 	float: left;
 	margin: 0 1px 0 0;
 	padding: 1em 0;
-	border-right: 1px dotted #ccc;
 	width: 200px;
     text-decoration: none;
     background-color: #434758;
-    color: #c8df00;
     font-family: "Overpass";
+}
+
+#nav a {
+    color: #22232D;
+	border-left: 10px solid #22232D;
 }
 
 #nav ul {
@@ -48,6 +55,11 @@
 	margin: 0;
 }
 
+#nav-current a {
+	border-left: 10px solid #afdf00;
+	color: #afdf00;
+}
+
 #nav li ul {
 	padding-left: 0.6em !important;
 }
@@ -59,23 +71,23 @@
 }
 
 #menu a, #nav a {
-    color: #22232D;
     text-decoration: none;
     padding: 10px 7px;
 }
 
 #menu a:hover {
 	background-color: #22232D;
-    color: #afdf00;
+	color: #afdf00;
 }
 
 #nav a:hover {
 	background-color: #22232D;
     color: #875fdf;
+	border-left: 10px solid #875fdf;
 }
 
 body {
-    background-color: #fff;
+    background-color: #f1f1f1;
     color: #000;
     font-family: sans-serif;
     padding: 0;
