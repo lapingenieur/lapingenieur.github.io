@@ -41,10 +41,10 @@
 }
 
 #nav {
-	float: left;
 	margin: 0 1px 0 0;
 	padding: 1em 0;
 	width: 200px;
+	height: 90vh;
     text-decoration: none;
     background-color: #434758;
     font-family: "Overpass";
@@ -95,6 +95,10 @@
 	background-color: #22232D;
     color: #875fdf;
 	border-left: 10px solid #875fdf;
+}
+
+html {
+	height 100vh;
 }
 
 body {
