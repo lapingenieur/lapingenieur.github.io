@@ -39,6 +39,11 @@
     font-family: "Overpass";
 }
 
+#menu a:hover {
+	background-color: #22232D;
+	color: #afdf00;
+}
+
 #nav a {
     color: #22232D;
 	border-left: 10px solid #22232D;
@@ -73,11 +78,6 @@
 #menu a, #nav a {
     text-decoration: none;
     padding: 10px 7px;
-}
-
-#menu a:hover {
-	background-color: #22232D;
-	color: #afdf00;
 }
 
 #nav a:hover {
