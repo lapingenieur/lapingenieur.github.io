@@ -31,26 +31,33 @@
     color: #efd8ff;
 	overflow: hidden;
 	background-color: #c8df00;
-	padding: 0.7ex;
+	padding: 6px;
+    height: 20px;
 }
 
 #menu a {
     color: #22232D;
 }
 
-#nav {
-	margin: 0 1px 0 0;
-	padding: 1em 0;
-	width: 210px;
-	height: 90vh;
+.nav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
     text-decoration: none;
     background-color: #434758;
-    float:left;
+    width: 210px;
+  top: 95px;
 }
 
 #menu a:hover {
 	background-color: #22232D;
-	color: #afdf00;
+	color: #c8df00;
 }
 
 #nav a {
@@ -70,8 +77,8 @@
 }
 
 #nav-current a {
-	border-left: 10px solid #afdf00;
-	color: #afdf00;
+	border-left: 10px solid #c8df00;
+	color: #c8df00;
 }
 
 #nav li ul {
