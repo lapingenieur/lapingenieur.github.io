@@ -1,134 +1,14 @@
-#header {
-    text-decoration: none;
-    background-color: #434758;
-    color: #c8df00;
-    font-size: 30px;
-    padding: 13px 13px 10px 13px;
-}
-
-#header-text {
-    margin-left:10px;
-}
-
-#header-text a {
-	text-decoration: none;
-	color: #c8df00;
-}
-
-#header-text-2 {
-	margin-left: 5px;
-	font-size: 20px;
-	color: #b79fec;
-}
-
-#header-logo {
-    vertical-align: middle;
-}
-
-#menu {
-    text-decoration: none;
-	clear: both;
-    color: #efd8ff;
-	overflow: hidden;
-	background-color: #c8df00;
-	padding: 6px;
-    height: 20px;
-}
-
-#menu a {
-    color: #22232D;
-}
-
-.nav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 16px;
-    text-decoration: none;
-    background-color: #434758;
-    width: 210px;
-  top: 95px;
-}
-
-#menu a:hover {
-	background-color: #22232D;
-	color: #c8df00;
-}
-
-#nav a {
-    color: #22232D;
-	border-left: 10px solid #22232D;
-}
-
-#nav ul {
-	margin: 0;
-	padding: 0;
-}
-
-#nav li {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-#nav-current a {
-	border-left: 10px solid #c8df00;
-	color: #c8df00;
-}
-
-#nav li ul {
-	padding-left: 0.6em !important;
-}
-
-#nav li a {
-	display: block;
-	margin: 0;
-	padding: 0.8ex 2em 0.8ex 1em;
-}
-
-#menu a, #nav a {
-    text-decoration: none;
-    padding: 10px 7px;
-}
-
-#nav a:hover {
-	background-color: #22232D;
-    color: #875fdf;
-	border-left: 10px solid #875fdf;
-}
-
-#main {
-	margin: 0 0 0 200px;
-	max-width: 50em;
-	padding: 25px;
-}
-
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
-html {
-	height 100vh;
-}
-
 body {
     background-color: #f1f1f1;
-    color: #000;
     font-family: "Overpass";
-    padding: 13px 13px 10px 13px;
-    padding: 0;
-    margin: 0;
+    text-decoration: none;
+    margin: 0px;
+}
+
+#content h1 {
+    border-left: 12px solid #875fdf;
+    padding-left: 18px;
+    padding-top: 8px;
 }
 
 .left {
@@ -144,7 +24,99 @@ body {
 }
 
 .hidden {
-	display: none;
+    display: none;
+}
+
+#header {
+    padding: 13px 13px 10px 13px;
+    background-color: #434758;
+    font-size: 30px;
+	color: #b79fec;
+}
+
+.header-logo {
+    vertical-align: middle;
+}
+
+.header-name a {
+    margin-left:10px;
+    text-decoration: none;
+    color: #c8df00;
+}
+
+.header-path {
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+#menu {
+    clear: both;
+    overflow: hidden;
+    padding: 6px;
+    height: 20px;
+    background-color: #c8df00;
+}
+
+#menu a, #nav a {
+    color: #22232D;
+    text-decoration:none;
+    padding: 10px 7px;
+}
+
+#menu a:hover {
+	background-color: #22232D;
+	color: #c8df00;
+}
+
+#nav {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #434758;
+  text-decoration: none;
+  top: 95px;
+}
+
+#nav a {
+    color: #22232D;
+    border-left: 10px solid #22232D;
+    display: block;
+    padding: 0.8ex 2em 0.8ex 1em;
+}
+
+#nav ul, #nav li {
+    padding: 0px;
+    margin: 0px;
+	list-style: none;
+}
+
+#nav ul {
+    padding-top: 16px;
+}
+
+#nav a:hover {
+	border-left: 10px solid #875fdf;
+    background-color: #22232D;
+    color: #875fdf;
+}
+
+#nav-current a {
+	border-left: 10px solid #c8df00;
+	color: #c8df00;
+}
+
+#content {
+    margin-left: 210px;
+}
+
+.maintext {
+    margin: 30px 35px 30px 35px;
+}
+
+.no-margin {
+    margin: 0px;
 }
 
 /* latin-ext */
