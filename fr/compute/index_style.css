@@ -59,6 +59,12 @@ body {
     color: #c8df00;
 }
 
+.header-path a {
+	font-size: 20px;
+	color: #b79fec;
+	text-decoration: none;
+}
+
 .header-path {
 	margin-left: 5px;
 	font-size: 20px;
