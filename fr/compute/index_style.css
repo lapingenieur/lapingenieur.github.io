@@ -1,0 +1,152 @@
+body {
+    color: #22232D;
+    background-color: #f1f1f1;
+    font-family: "Overpass";
+    text-decoration: none;
+    margin: 0px;
+}
+
+#content h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 12px solid #875fdf;
+    padding-left: 18px;
+    padding-top: 8px;
+}
+
+#content h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 12px solid #875fdf;
+    padding-left: 18px;
+    padding-top: 8px;
+}
+
+.paragraph {
+    margin-top: 20px;
+}
+
+.left {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.right {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#header {
+    padding: 13px 13px 10px 13px;
+    background-color: #434758;
+    font-size: 30px;
+	color: #b79fec;
+}
+
+.header-logo {
+    vertical-align: middle;
+}
+
+.header-name a {
+    margin-left:10px;
+    text-decoration: none;
+    color: #c8df00;
+}
+
+.header-path {
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+#menu {
+    clear: both;
+    overflow: hidden;
+    padding: 6px;
+    height: 20px;
+    background-color: #c8df00;
+}
+
+#menu a, #nav a {
+    color: #22232D;
+    text-decoration:none;
+    padding: 10px 7px;
+}
+
+#menu a:hover {
+	background-color: #22232D;
+	color: #c8df00;
+}
+
+#nav {
+  height: 100%;
+  width: 215px;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #434758;
+  text-decoration: none;
+  top: 95px;
+}
+
+#nav a {
+    color: #22232D;
+    border-left: 10px solid #22232D;
+    display: block;
+    padding: 0.8ex 2em 0.8ex 1em;
+}
+
+#nav ul, #nav li {
+    padding: 0px;
+    margin: 0px;
+	list-style: none;
+}
+
+#nav ul {
+    padding-top: 16px;
+}
+
+#nav a:hover {
+	border-left: 10px solid #875fdf;
+    background-color: #22232D;
+    color: #875fdf;
+}
+
+#nav-current a {
+	border-left: 10px solid #c8df00;
+	color: #c8df00;
+}
+
+#content {
+    margin-left: 210px;
+}
+
+.maintext {
+    margin: 30px 35px 30px 35px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/overpass/v5/qFdH35WCmI96Ajtm81GrU9vyww.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/overpass/v5/qFdH35WCmI96Ajtm81GlU9s.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
