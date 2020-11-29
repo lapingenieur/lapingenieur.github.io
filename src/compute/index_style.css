@@ -70,21 +70,26 @@ body {
 	font-size: 20px;
 }
 
-#menu {
+.menu {
     clear: both;
     overflow: hidden;
-    padding: 6px;
-    height: 20px;
+    width: 100%;
     background-color: #c8df00;
+    position: fixed;
 }
 
-#menu a, #nav a {
+.menu-padding{
+    padding: 6px;
+    height: 20px;
+}
+
+.menu a, #nav a {
     color: #22232D;
     text-decoration:none;
     padding: 10px 7px;
 }
 
-#menu a:hover {
+.menu a:hover {
 	background-color: #22232D;
 	color: #c8df00;
 }
@@ -129,6 +134,8 @@ body {
 }
 
 #content {
+    position: absolute;
+    margin-top: 32px;
     margin-left: 215px;
 }
 
