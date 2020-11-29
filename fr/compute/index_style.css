@@ -110,7 +110,7 @@ body {
 #nav ul, #nav li {
     padding: 0px;
     margin: 0px;
-	list-style: none;
+    list-style: none;
 }
 
 #nav ul {
@@ -118,7 +118,7 @@ body {
 }
 
 #nav a:hover {
-	border-left: 10px solid #875fdf;
+    border-left: 10px solid #875fdf;
     background-color: #22232D;
     color: #875fdf;
 }
