@@ -1,16 +1,15 @@
-var nav = document.getElementById('nav');
-var navTop = nav.offsetTop;
+// index_nav.js - v0.3.1 global
 
-var menu = document.getElementById('menu');
-var menuTop = menu.offsetTop;
+var locked = document.getElementById('locked');
+var lockedTop = locked.offsetTop;
 
-window.onscroll = function () { myScrollFunction() };
+window.onscroll = function () { myScrollFunctionB() };
 
-function myScrollFunction() {
-var res = navTop - document.documentElement.scrollTop;
+function myScrollFunctionB() {
+    var res = lockedTop - document.documentElement.scrollTop;
     if (res > 0) {
-        nav.setAttribute('style', 'top:' + res + 'px');
+        locked.setAttribute('style', 'top:' + res + 'px');
     } else {
-        nav.setAttribute('style', 'top:0px')
+        locked.setAttribute('style', 'top:0px')
     }
 }

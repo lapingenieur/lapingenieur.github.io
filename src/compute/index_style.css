@@ -1,3 +1,5 @@
+/* index_style.css - v0.3.1 global */
+
 body {
     color: #22232D;
     background-color: #f1f1f1;
@@ -70,12 +72,16 @@ body {
 	font-size: 20px;
 }
 
+.locked {
+    position: fixed;
+    width: 100%;
+}
+
 .menu {
     clear: both;
     overflow: hidden;
     width: 100%;
     background-color: #c8df00;
-    position: fixed;
 }
 
 .menu-padding{
@@ -95,9 +101,8 @@ body {
 }
 
 #nav {
-  height: 100%;
+  height: 100vh;
   width: 215px;
-  position: fixed;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #434758;
