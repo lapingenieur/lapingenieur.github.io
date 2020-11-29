@@ -59,6 +59,12 @@ body {
     color: #c8df00;
 }
 
+.header-path a {
+	font-size: 20px;
+	color: #b79fec;
+	text-decoration: none;
+}
+
 .header-path {
 	margin-left: 5px;
 	font-size: 20px;
@@ -104,7 +110,7 @@ body {
 #nav ul, #nav li {
     padding: 0px;
     margin: 0px;
-	list-style: none;
+    list-style: none;
 }
 
 #nav ul {
@@ -112,7 +118,7 @@ body {
 }
 
 #nav a:hover {
-	border-left: 10px solid #875fdf;
+    border-left: 10px solid #875fdf;
     background-color: #22232D;
     color: #875fdf;
 }
@@ -123,7 +129,7 @@ body {
 }
 
 #content {
-    margin-left: 210px;
+    margin-left: 215px;
 }
 
 .maintext {
