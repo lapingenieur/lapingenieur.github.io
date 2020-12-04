@@ -80,11 +80,16 @@ body {
     position: fixed;
 }
 
-#menu {
-    clear: both;
-    overflow: hidden;
+.inside-menu {
     padding: 6px;
     height: 20px;
+}
+
+#menu {
+    width: 100%;
+    position: fixed;
+    clear: both;
+    overflow: hidden;
     background-color: #c8df00;
 }
 
@@ -109,6 +114,7 @@ body {
 }
 
 #nav {
+  position: fixed;
   height: 100vh;
   width: 215px;
   overflow-x: hidden;
