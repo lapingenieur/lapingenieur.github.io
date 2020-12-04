@@ -49,8 +49,7 @@ body {
 }
 
 #header {
-    padding: 13px 13px 10px 13px;
-    background-color: #434758;
+    padding: 13px 13px 10px 13px; background-color: #434758;
     font-size: 30px;
 	color: #b79fec;
 }
@@ -98,6 +97,15 @@ body {
 #menu a:hover {
 	background-color: #22232D;
 	color: #c8df00;
+    text-decoration: none;
+}
+
+.menu-current-page {
+    font-weight: bold;
+}
+
+.menu-current-page:hover {
+    font-weight: normal;
 }
 
 #nav {
