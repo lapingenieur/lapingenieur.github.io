@@ -1,12 +1,9 @@
 <script lang="ts">
-  let unfocusWorkaround = false;
-
   function scrollUp() {
     window.scrollTo({
       left: window.scrollX,
       top: 0
     });
-    unfocusWorkaround = ! unfocusWorkaround;
   }
 
   let visible = ""; // adds a class
@@ -34,7 +31,6 @@
 </script>
 <svelte:window on:scroll={handleScroll} />
 
-{#key unfocusWorkaround}
 <button on:click={scrollUp} class="{visible}">
   <div class="virtual">
     <svg viewBox="220 220 560 560">
@@ -42,7 +38,6 @@
     </svg>
   </div>
 </button>
-{/key}
 
 <style>
   button {
