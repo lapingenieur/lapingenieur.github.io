@@ -9,6 +9,7 @@
   let visible = ""; // adds a class
   let lastChange = 0;
   const offsetTop = 60; // px
+  const offsetBottom = 120; // px
   const offsetUp = 200; // px
 
   function handleScroll() {
@@ -16,8 +17,11 @@
     const scroll = window.pageYOffset;
 
     if (scroll <= offsetTop) {
-      // at top
+      // at the top
       visible = "";
+    } else if (document.documentElement.scrollHeight - document.documentElement.clientHeight - scroll <= offsetBottom) {
+      // at the bottom
+      visible = "up";
     } else if (lastChange - scroll - offsetUp > 0) {
       // scrolled up
       visible = "up";
