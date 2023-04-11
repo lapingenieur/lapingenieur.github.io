@@ -1,0 +1,43 @@
+:root {
+  font-family: "Source Sans Pro", sans-serif;
+
+  --hl-red: #fc5d7c;
+  --hl-orange: #f39660;
+  --hl-green: #9ed072;
+  --hl-blue: #76cce0;
+  --hl-purple: #b39df3;
+  --hl-white: #e2e2e3;
+  --hl-gray: #595f6f;
+  --hl-gray1: #8a8f9a;
+  --hl-black: #181819;
+  --hl-bg0: #2c2e34;
+  --hl-bg1: #33353f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.block-code {
+  font-family: "Roboto Mono", monospace;
+  color: var(--hl-white);
+}
+.inline-code {
+  font-family: "Roboto Mono", monospace;
+}
+
+code .hl-red { color: var(--hl-red) }
+code .hl-orange { color: var(--hl-orange) }
+code .hl-green { color: var(--hl-green) }
+code .hl-blue { color: var(--hl-blue) }
+code .hl-purple { color: var(--hl-purple) }
+code .hl-white { color: var(--hl-white) }
+code .hl-gray { color: var(--hl-gray) }
+code .hl-gray1 { color: var(--hl-gray1) }
+code .hl-black { color: var(--hl-black) }
+code .hl-bg0 { color: var(--hl-bg0) }
+code .hl-bg1 { color: var(--hl-bg1) }
