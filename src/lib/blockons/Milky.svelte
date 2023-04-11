@@ -31,7 +31,7 @@
 
   <p>
     Mais on retrouve également des pièces plus agréables, et plus complexes, comme
-    <a href="/chiptune/to_norway_with_love">To Norway with Love</a> de Brandon Walsh, ou
+    <a href="/chiptune/to_norway_with_love.mp3">To Norway with Love</a> de Brandon Walsh, ou
     <a href="https://youtu.be/SEeALyvkMIQ">Escape Velocity</a> de gusse ^ digisonix.
   </p>
 </Blockon>
