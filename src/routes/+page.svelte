@@ -7,24 +7,29 @@
   import Milky from "$lib/blockons/Milky.svelte";
 
   import Blockon from "$lib/blockons/Blockon.svelte";
+
 </script>
 
 <div class="page">
   <div class="main">
-    <Blockon color="null">
-      <h1>TODOS</h1>
+    {#if import.meta.env.DEV}
+      <Blockon color="null">
+        <h1>TODOS</h1>
 
-      <ul>
-        <li>Navbar reactivity</li>
-        <li>Navbar as menu for small devices ?</li>
-        <li>Make the navbar smaller when scrolling down</li>
-        <li>Scroll up button</li>
-        <li>Build export and upload to github.io</li>
-        <li>Test if correcly works from github.io</li>
-        <li>Ask papi mami to test if correcly works from github.io</li>
-        <li>Then may possibly new page/s for 8bits, others ? <i>only if there's the time and everything ok</i></li>
-      </ul>
-    </Blockon>
+        <ul>
+          <li><input disabled type="checkbox" checked>Navbar reactivity</li>
+          <li><input disabled type="checkbox">Navbar as menu for small devices ?</li>
+          <li><input disabled type="checkbox" checked>Make the navbar smaller when scrolling down</li>
+          <li><input disabled type="checkbox" checked>Scroll up button</li>
+          <li><input disabled type="checkbox" checked>Build export and upload to github.io</li>
+          <li><input disabled type="checkbox">Low levels</li>
+          <li><input disabled type="checkbox">Misc: icon, page title...</li>
+          <li><input disabled type="checkbox">Test if correcly works from github.io</li>
+          <li><input disabled type="checkbox">Ask papi mami to test if correcly works from github.io</li>
+          <li><input disabled type="checkbox">Then may possibly new page/s for 8bits, others ? <i>only if there's the time and everything ok</i></li>
+        </ul>
+      </Blockon>
+    {/if}
 
     <TableContents />
     <WebDev />
@@ -36,6 +41,14 @@
 </div>
 
 <style>
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li input {
+    margin: 0 .2em .25em -1.4em;
+  }
+
   .page {
     width: 100%;
     display: flex;
