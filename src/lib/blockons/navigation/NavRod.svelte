@@ -98,7 +98,7 @@
     z-index: 100;
     height: 3.4em;
     width: 100%;
-    margin-bottom: 0.8em;
+    margin-bottom: 1em;
 
     display: flex;
     flex-direction: row;

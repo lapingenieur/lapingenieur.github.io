@@ -7,7 +7,7 @@
   <p>
     Quoi de mieux pour comprendre le fonctionnement d'un ordinateur que d'en créer un soi-même, à partir de vraiment rien ?
     C'est ainsi que, en m'aidant des différents travaux de <a href="https://eater.net">Ben Eeater</a>,
-    j'ai théorisé, élaboré, simulé puis mis en pratique un ordinateur 8-bits à partir de composants électroniques de base.
+    j'ai théorisé, élaboré et simulé un ordinateur 8-bits à partir de composants électroniques de base.
     Afin de simplifier l'affichage, ces derniers sont regroupés en modules (voir ci-dessous).
   </p>
 
@@ -16,7 +16,7 @@
   </div>
 
   <p>
-    J'ai d'abord simulé le système dans le logiciel
+    J'ai d'abord émulé le système dans le logiciel
     <a href="https://github.com/logisim-evolution/logisim-evolution">Logisim-Evolution</a>
     en le programmant à la main, avant de créer un langage assembleur et son compilateur spécifiques,
     dont les explications sont accessibles dans les fichiers exposés plus bas.

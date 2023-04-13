@@ -23,16 +23,11 @@
   </p>
 
   <p>
-    Ce genre musical offre un très grande variété de complexité&nbsp;: il a émergé avec les débuts de l'informatique
-    et les limitations matérielles de stockage, ce pourquoi les artistes de l'époque optimisaient au plus possible
-    leurs audios (comme <a href="https://youtu.be/thnXzUFJnfQ">Captain - Space Debris</a> de Markus Kaarlonen)
-    quite à les rendre peu plaisants à l'oreille (par exemple, Rob Hubbards avec <a href="https://youtu.be/pgPEaI0GHBI">Commando</a>).
-  </p>
-
-  <p>
-    Mais on retrouve également des pièces plus agréables, et plus complexes, comme
-    <a href="/chiptune/to_norway_with_love.mp3">To Norway with Love</a> de Brandon Walsh, ou
-    <a href="https://youtu.be/SEeALyvkMIQ">Escape Velocity</a> de gusse ^ digisonix.
+    Écrire une musique de cette manière permettait aux programmeurs des débuts de l'informatique d'intégrer
+    une bande son à leurs jeux sans trop utiliser d'espace mémoire.
+    Des compositions comme <a href="https://youtu.be/pgPEaI0GHBI">Commando</a> de Rob Hubbards rendent à perfection
+    cet aspect&nbsp;: peu plaisant à l'oreille, ces morceaux sont d'une complexité remarquable.
+    Le chiptune n'a aujourd'hui plus aucun intérêt de ce point de vue.
   </p>
 </Blockon>
 

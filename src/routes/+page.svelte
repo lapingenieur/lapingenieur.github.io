@@ -5,9 +5,9 @@
   import Python from "$lib/blockons/Python.svelte";
   import Workflow from "$lib/blockons/Workflow.svelte";
   import Milky from "$lib/blockons/Milky.svelte";
+  import LowLevel from "$lib/blockons/LowLevel.svelte";
 
-  import Blockon from "$lib/blockons/Blockon.svelte";
-
+  import Blockon from "$lib/blockons/Blockon.svelte"
 </script>
 
 <div class="page">
@@ -22,7 +22,7 @@
           <li><input disabled type="checkbox" checked>Make the navbar smaller when scrolling down</li>
           <li><input disabled type="checkbox" checked>Scroll up button</li>
           <li><input disabled type="checkbox" checked>Build export and upload to github.io</li>
-          <li><input disabled type="checkbox">Low levels</li>
+          <li><input disabled type="checkbox" checked>Low levels</li>
           <li><input disabled type="checkbox">Misc: icon, page title...</li>
           <li><input disabled type="checkbox">Test if correcly works from github.io</li>
           <li><input disabled type="checkbox">Ask papi mami to test if correcly works from github.io</li>
@@ -35,6 +35,7 @@
     <TableContents />
     <WebDev />
     <Bits />
+    <LowLevel />
     <Workflow />
     <Python />
     <Milky />

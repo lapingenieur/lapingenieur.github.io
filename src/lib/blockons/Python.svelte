@@ -6,29 +6,9 @@
 <Blockon id="python">
   <h1>Scripts python</h1>
 
-  <Plate
-      imgsrc="/images/python-logo.png"
-      imgalt="Python logo"
-      rightRatio="4"
-      padding="2em"
-    >
-    <div>
-      <p>
-        Bien qu'il ne soit de loin pas mon langage préféré, je me suis initié au
-        <a href="https://python.org">python</a>. Selon moi, sa syntaxe à indentation facilite les erreurs,
-        les variables ne sont pas typées, l'absence de normes de nomination des objets apporte une
-        hétérogénéité oppressante lors de l'utilisation simultanée de plusieurs modules,
-        les rapports d'erreur sont peu clairs et l'interprétation très lente...
-      </p>
-      <p>
-        On ne peut cependant pas nier sa renommée et sa simplicité&nbsp;: il reste l'un des langages les
-        plus utilisés dans le monde.
-      </p>
-    </div>
-  </Plate>
-
   <p>
-    Je me suis servi de ce langage pour différents projets&nbsp;:
+    <a href="https://python.org/">Python</a> est un langage de programmation interprété très populaire.
+    Je m'en suis servis pour différents projets&nbsp;:
   </p>
 
   <ul class="first-hand">
@@ -96,7 +76,7 @@
           ajustés, les functionnalités sont compressées à outrance pour tenir dans les limites de mémoire.
         </li>
         <li>
-          <a href="https://my.numworks.com/python/polettielio/creates">Crates</a>
+          <a href="https://my.numworks.com/python/polettielio/crates">Crates</a>
           est un jeu de réactivité dont le but est d'appuyer au bon moment sur la bonne touche
           suivant la "boîte" (crate) qui s'affiche à l'écran.
         </li>
@@ -109,9 +89,28 @@
       ou le navigateur web <a href="https://qutebrowser.org/">Qutebrowser</a>.
     </li>
   </ul>
+
+  <hr/>
+
+  <p>
+    Python n'est de loin pas mon langage préféré&nbsp;: selon moi, sa syntaxe à indentation facilite les erreurs,
+    les variables ne sont pas typées, l'absence de normes de nomination des objets apporte une
+    hétérogénéité oppressante lors de l'utilisation simultanée de plusieurs modules,
+    les rapports d'erreur sont peu clairs et l'interprétation très lente...
+  </p>
+  <p>
+    On ne peut cependant pas nier sa renommée et sa simplicité&nbsp;: il reste l'un des langages les
+    plus utilisés dans le monde.
+  </p>
+
 </Blockon>
 
 <style>
+  hr {
+    width: 85%;
+    border-top: 2px solid black;
+  }
+
   .first-hand > li:not(:last-child) {
     margin-bottom: 1em;
   }
