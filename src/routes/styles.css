@@ -14,10 +14,6 @@
   --hl-bg1: #33353f;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
 }

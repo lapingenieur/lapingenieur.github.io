@@ -2,7 +2,8 @@
   function scrollUp() {
     window.scrollTo({
       left: window.scrollX,
-      top: 0
+      top: 0,
+      behavior: "smooth"
     });
   }
 
@@ -55,7 +56,7 @@
 
     bottom: calc(-1 * var(--inner-width) - 3em - 10px );
     transition:
-      bottom 0.25s ease-in-out;
+      bottom 0.5s ease;
 
     border: none;
     border-top-left-radius: 50%;

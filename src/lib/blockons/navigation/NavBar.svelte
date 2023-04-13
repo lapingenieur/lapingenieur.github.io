@@ -23,8 +23,14 @@
       lastChange = scrollY;
     }
   }
+
+  function handle_hashchange() {
+    shrunk = false;
+    lastChange = scrollY;
+  }
 </script>
 <svelte:window
+  on:hashchange={handle_hashchange}
   on:scroll={handleScroll}
   bind:scrollY={scrollY}
 />

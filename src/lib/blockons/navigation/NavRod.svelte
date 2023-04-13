@@ -9,6 +9,7 @@
   let shrunk = false;
   let lastChange = 0;
   const offset = 60; // px
+  const offsetPlus = 500; // px
   let timeoutBuffer: any;
 
   function handleScroll(reccursive = false) {
@@ -24,7 +25,11 @@
       // not at top
       topBar = false;
 
-      if (lastChange - scrollY - offset > 0) {
+      if (scrollY <= offsetPlus) {
+        // almost at top
+        lastChange = 0;
+        shrunk = false;
+      } else if (lastChange - scrollY - offset > 0) {
         // scrolled up
         shrunk = false;
         lastChange = scrollY;
@@ -52,19 +57,18 @@
 />
 
 <div class="menu-around" class:menuVisible class:topBar class:shrunk>
-  <div class="bar-placeholder">
-    <div class="the-title">
-      <span>n°500 506</span>
-    </div>
-  </div>
-
   <div class="menu">
     <div class="menu-container">
-      <nav class="rod">
-        {#each regions as region}
-          <a href="#{region[1]}" on:click={() => menuVisible = false}>{region[0]}</a>
-        {/each}
-      </nav>
+      <div class="the-title">
+        <span>n°500 506</span>
+      </div>
+      <div class="rod-container">
+        <nav class="rod">
+          {#each regions as region}
+            <a href="#{region[1]}" on:click={() => menuVisible = false}>{region[0]}</a>
+          {/each}
+        </nav>
+      </div>
     </div>
   </div>
 
@@ -88,40 +92,13 @@
 
     --menu-transition-time: 0.6s;
     --menu-transition: var(--menu-transition-time) cubic-bezier(.9,0,.1,1);
-    --placeholder-transition-time: 0.47s;
-    --placeholder-transition-function: cubic-bezier(.9,0,.1,1);
-    --placeholder-transition: var(--placeholder-transition-time) var(--placeholder-transition-function);
-
-    --placeholder-topoffset: -3.6em;
   }
 
-  .bar-placeholder {
-    z-index: 100;
-
-    position: absolute;
-    top: var(--placeholder-topoffset);
-    left: 0;
-    height: 3.4em;
-    width: 100vw;
-
-    overflow: hidden;
-    transition: all var(--placeholder-transition);
-
-    background: linear-gradient(45deg, #e66465, #9198e5 150%);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
-  .menu-around.topBar .bar-placeholder {
-    top: 0;
-    left: 0;
-  }
-  
   .the-title {
     z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 3.4em;
     width: 100%;
+    margin-bottom: 0.8em;
 
     display: flex;
     flex-direction: row;
@@ -131,11 +108,19 @@
     transition: all var(--menu-transition);
   }
   .the-title span {
+    height: 1.36em;
     font-size: 2.5em;
     font-style: italic;
+    vertical-align: middle;
+
+    transition: all var(--menu-transition);
   }
-  .menu-around:not(.topBar) .the-title {
-    top: var(--placeholder-topoffset);
+  .menu-around.menuVisible .the-title {
+    height: 5em;
+    margin: 1.2em 0 0.8em;
+  }
+  .menu-around.menuVisible .the-title span {
+    font-size: 3.5em;
   }
 
   .menu {
@@ -149,13 +134,14 @@
     border-bottom-right-radius: 100%;
 
     overflow: hidden;
-    transition:
-      top var(--menu-transition),
-      height var(--menu-transition),
-      width var(--menu-transition);
+    transition: all var(--menu-transition);
 
     background: linear-gradient(135deg, #e66465 -20%, #9198e5 190%);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .menu-around:not(.menuVisible).shrunk .menu {
+    top: -4.5em;
   }
   .menu-around.menuVisible .menu {
     /* get PI/4 position for the greatest viewport dimension and apply as 1/1 ratio-ed size */
@@ -163,12 +149,12 @@
     width: var(--size);
     height: var(--size);
   }
-  .menu-around.topBar:not(.menuVisible) .menu {
-    height: 0;
-    width: 0;
+  .menu-around.topBar .menu {
+    border-bottom-right-radius: 0;
   }
-  .menu-around:not(.menuVisible).shrunk .menu {
-    top: -4.5em;
+  .menu-around.topBar:not(.menuVisible) .menu {
+    height: 3.4em;
+    width: 100vw;
   }
 
   .button-container {
@@ -228,9 +214,6 @@
   }
 
   .menu .menu-container {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100vh;
     width: 100vw;
 
@@ -239,34 +222,33 @@
     /* justify-content: center; */
     align-items: center;
   }
-  .menu .menu-container::before,
-  .menu .menu-container::after {
-    content: "";
-    margin: auto;
+
+  .rod-container {
+    box-shadow: 0px -1.8em 20px -1.8em rgba(0,0,0,0.2);
+    overflow-y: auto;
+    padding: 0 2em 2em;
   }
 
   nav.rod {
-    padding: 4em 0;
-    width: 100%;
+    padding: 2em 2em 2.4em;
 
     display: flex;
     flex-direction: column;
-    /* using before/after margins here */
-    /* justify-content: center; */
     align-items: center;
 
-    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 
     gap: 2.4em;
   }
 
   .rod a {
     position: relative;
-    text-align: center;
-    transition: color 0.2s;
+    padding: 0 1em;
 
     color: black;
+    text-align: center;
+    transition: color 0.2s;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2.5em;
   }
 </style>
