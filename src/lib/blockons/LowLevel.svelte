@@ -35,6 +35,12 @@
       qui connecte un port local (WSL) au port équivalent exposé sur le réseau local (Windows).
     </li>
   </ul>
+
+  <p>
+    Je suis également à l'iniciative de la page française
+    <a href="https://fr.wikipedia.org/wiki/Types_de_donn%C3%A9e_du_langage_C">types de données du langage C</a>
+    du site Wikipédia.
+  </p>
 </Blockon>
 
 <style>
