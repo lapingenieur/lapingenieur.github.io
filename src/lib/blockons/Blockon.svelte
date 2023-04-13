@@ -13,7 +13,7 @@
   .blockon {
     --padding: 1em;
     --color-border-left-size: 12px;
-    --background-color: #e4e9ec;
+    --background-color: #ececf0;
 
     width: calc(100% - 2*var(--padding) - var(--color-border-left-size));
     padding: var(--padding);
