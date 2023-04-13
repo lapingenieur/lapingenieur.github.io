@@ -92,7 +92,7 @@
 
   .footer {
     align-self: stretch;
-    background-color: #49464e;
+    background-color: #3a383e;
     padding: 1em;
 
     box-shadow: 0 0 10px rgba(0,0,0,0.5);

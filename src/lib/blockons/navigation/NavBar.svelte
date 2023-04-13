@@ -25,8 +25,10 @@
   }
 
   function handle_hashchange() {
-    shrunk = false;
-    lastChange = scrollY;
+    setTimeout(() => {
+      shrunk = false;
+      lastChange = scrollY;
+    }, 100);
   }
 </script>
 <svelte:window
@@ -36,18 +38,25 @@
 />
 
 <nav class="bar" class:shrunk>
-  <div class="the-title">
-    <span>n°500 506</span>
+  <div class="center">
+    <a class="the-title" href="#sommaire">
+      <span>n°500 506</span>
+      <div class="shadow-holder">
+        <div class="shadow-box" />
+      </div>
+    </a>
+    <div>
+      {#each regions as region}
+      <!-- <span on:click={() => jumpto(region[1])}>{region[0]}</span> -->
+        <a class="nav-element" href="#{region[1]}">
+          {region[0]}
+          <div class="shadow-holder">
+            <div class="shadow-box" />
+          </div>
+        </a>
+      {/each}
+    </div>
   </div>
-  {#each regions as region}
-    <!-- <span on:click={() => jumpto(region[1])}>{region[0]}</span> -->
-      <a class="nav-element" href="#{region[1]}">
-        {region[0]}
-        <div class="shadow-holder">
-          <div class="shadow-box" />
-        </div>
-      </a>
-  {/each}
 </nav>
 
 <style>
@@ -56,7 +65,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5em;
+    height: 3.4em;
 
     background: linear-gradient(45deg, #e66465, #9198e5);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -71,20 +80,15 @@
     height: 3.4em;
   }
 
-  .the-title {
-    padding: 1em;
-  }
-  .the-title span {
-    font-size: 2.2em;
-    font-style: italic;
-    transition: font-size 0.3s;
-  }
-  .shrunk .the-title span {
-    font-size: 2.2em;
+  .bar .center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .bar a {
-    padding: 1em;
+    padding: 1em 0.8em;
     position: relative;
 
     font-size: 1.3em;
@@ -120,22 +124,32 @@
 
     pointer-events: none;
   }
-  .bar .nav-element:hover .shadow-holder .shadow-box {
+  .bar .nav-element:hover .shadow-holder .shadow-box,
+  .bar a:hover .shadow-holder .shadow-box {
     opacity: 0.5;
   }
 
-  @media screen and (min-width: 770px) {
-    .the-title {
-      margin-right: min(calc(100% - 770px), 1em);
-    }
-    .the-title span {
-      font-size: 2.5em;
-    }
+  .bar a.the-title {
+    margin-right: 10px;
+  }
+  .bar a.the-title span {
+    font-style: italic;
+    font-size: 2.2em;
+    transition: font-size 0.3s, color 0.2s;
+  }
+  .bar.shrunk a.the-title span {
+    font-size: 2em;
   }
 
-  @media screen and (max-width: 1220px) {
+  @media screen and (min-width: 1220px) {
+    .bar a.the-title span {
+      font-size: 2.5em;
+    }
+    .bar.shrunk a.the-title span {
+      font-size: 2.2em;
+    }
     nav.bar {
-      height: 3.4em;
+      height: 5em;
     }
   }
 </style>

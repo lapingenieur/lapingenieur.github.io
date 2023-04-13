@@ -21,6 +21,16 @@
     margin-top: 3.4em;
   }
 
+  main :global(*) {
+    scroll-margin-top: .5em;
+  }
+
+  @media screen and (min-width: 450px) {
+    main :global(*) {
+      scroll-margin-top: 4.4em;
+    }
+  }
+
   @media screen and (min-width: 1220px) {
     main {
       margin-top: 5em;

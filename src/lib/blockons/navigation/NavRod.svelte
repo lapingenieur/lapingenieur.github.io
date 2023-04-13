@@ -2,6 +2,8 @@
   export let regions: Array<[string, string]>;
 
   let scrollY: number;
+  let innerWidth: number;
+  let innerHeight: number;
 
   let topBar = true;
   let menuVisible = false;
@@ -22,10 +24,10 @@
       lastChange = 0;
       shrunk = false;
     } else {
-      // not at top
       topBar = false;
+      // not at top
 
-      if (scrollY <= offsetPlus) {
+      if (innerWidth < 450 && scrollY <= offsetPlus) {
         // almost at top
         lastChange = 0;
         shrunk = false;
@@ -34,7 +36,7 @@
         shrunk = false;
         lastChange = scrollY;
       } else if (scrollY - lastChange - offset > 0) {
-        // scrolled down
+        // scrolled down, hide on small devices and shrunk wide devices
         shrunk = true;
         lastChange = scrollY;
       }
@@ -47,20 +49,32 @@
   function buttonPushed() {
     menuVisible = !menuVisible
 
-    shrunk = false;
-    lastChange = scrollY;
+    if (innerWidth < 1000) {
+      shrunk = false;
+      lastChange = scrollY;
+    }
+  }
+
+  function handle_hashchange() {
+    setTimeout(() => {
+      shrunk = false;
+      lastChange = scrollY;
+    }, 50);
   }
 </script>
 <svelte:window
+  on:hashchange={handle_hashchange}
   on:scroll={() => handleScroll()}
   bind:scrollY={scrollY}
+  bind:innerWidth={innerWidth}
+  bind:innerHeight={innerHeight}
 />
 
 <div class="menu-around" class:menuVisible class:topBar class:shrunk>
   <div class="menu">
     <div class="menu-container">
       <div class="the-title">
-        <span>n°500 506</span>
+        <a href="#sommaire" on:click={() => menuVisible = false}>n°500 506</a>
       </div>
       <div class="rod-container">
         <nav class="rod">
@@ -107,11 +121,14 @@
 
     transition: all var(--menu-transition);
   }
-  .the-title span {
+  .the-title a {
     height: 1.36em;
     font-size: 2.5em;
     font-style: italic;
     vertical-align: middle;
+
+    color: black;
+    text-decoration: none;
 
     transition: all var(--menu-transition);
   }
@@ -119,7 +136,7 @@
     height: 5em;
     margin: 1.2em 0 0.8em;
   }
-  .menu-around.menuVisible .the-title span {
+  .menu-around.menuVisible .the-title a {
     font-size: 3.5em;
   }
 
@@ -140,21 +157,36 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 
-  .menu-around:not(.menuVisible).shrunk .menu {
-    top: -4.5em;
-  }
   .menu-around.menuVisible .menu {
     /* get PI/4 position for the greatest viewport dimension and apply as 1/1 ratio-ed size */
     --size: calc(1.42 * 100vmax);
     width: var(--size);
     height: var(--size);
   }
-  .menu-around.topBar .menu {
-    border-bottom-right-radius: 0;
+  @media screen and (max-width: 700px) {
+    .menu-around:not(.menuVisible).shrunk .menu {
+      top: -4.5em;
+    }
+    .menu-around:not(.menuVisible).topBar .menu {
+      height: 3.4em;
+      width: 100vw;
+      border-bottom-right-radius: 0;
+    }
   }
-  .menu-around.topBar:not(.menuVisible) .menu {
-    height: 3.4em;
-    width: 100vw;
+  @media screen and (min-width: 450px) and (max-width: 1000px) {
+    .menu-around .menu {
+      border-bottom-right-radius: 0;
+    }
+    .menu-around:not(.menuVisible) .menu {
+      height: 3.4em;
+      width: 100vw;
+    }
+  }
+  @media screen and (min-width: 1000px){
+    .menu {
+      width: 0;
+      height: 0;
+    }
   }
 
   .button-container {
@@ -165,10 +197,28 @@
     height: 4em;
     width: 4em;
 
-    transition: top var(--menu-transition);
+    transition:
+      top var(--menu-transition),
+      height 0.3s,
+      width 0.3s;
   }
-  .menu-around:not(.menuVisible).shrunk .button-container {
-    top: -4.5em;
+  @media screen and (max-width: 700px) {
+    .menu-around:not(.menuVisible).shrunk .button-container {
+      top: -4.5em;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .button-container {
+      height: 3.4em;
+      width: 3.4em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .menu-around:not(.shrunk) .button-container,
+    .menu-around.menuVisible .button-container {
+      height: 5em;
+      width: 5em;
+    }
   }
 
   .menu-button {
@@ -176,8 +226,8 @@
 
     border: none;
     background: transparent;
-    border-bottom-right-radius: 100%;
     transition: all 0.5s cubic-bezier(.22,.94,.54,1.07);
+    cursor: pointer;
 
     height: 100%;
     width: 100%;
@@ -185,11 +235,33 @@
   .menu-around.menuVisible .menu-button {
     border-bottom-right-radius: 0;
   }
-
-  .menu-around.topBar .menu-button {
-    border-bottom-right-radius: 0;
-    height: 85%;
-    width: 85%;
+  @media screen and (max-width: 450px) {
+    .menu-around:not(.menuVisible):not(.topBar) .menu-button {
+      border-bottom-right-radius: 100%;
+    }
+    .menu-around.topBar .menu-button {
+      border-bottom-right-radius: 0;
+      height: 85%;
+      width: 85%;
+    }
+  }
+  @media screen and (min-width: 450px) and (max-width: 1000px) {
+    .menu-around:not(.menuVisible) .menu-button {
+      border-bottom-right-radius: 0;
+      height: 85%;
+      width: 85%;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .menu-around.menuVisible .menu-button {
+      height: 85%;
+      width: 85%;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .menu-button {
+      border-bottom-right-radius: 0;
+    }
   }
 
   .menu-around svg {
@@ -199,6 +271,12 @@
     left: 43%;
     width: 60%;
     height: 60%;
+  }
+  @media screen and (min-width: 1000px) {
+    .menu-around svg {
+      top: 50%;
+      left: 50%;
+    }
   }
   .menu-around:not(.menuVisible) .open {
     transform: translate(-50%, -50%) scale(1);
@@ -232,13 +310,23 @@
   nav.rod {
     padding: 2em 2em 2.4em;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr;
 
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 
     gap: 2.4em;
+  }
+  @media screen and (min-width: 900px) {
+    .rod-container {
+      margin-top: 2em;
+    }
+    nav.rod {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .rod a {

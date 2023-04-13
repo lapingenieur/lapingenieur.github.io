@@ -5,6 +5,7 @@
   const regions: Array<[string, string]> = [         // name -> id
     ["Webdev", "webdev"],
     ["8-bits", "bits"],
+    ["Bas Niveau", "lowlevel"],
     ["Workflow", "workflow"],
     ["Python", "python"],
     ["Chiptune", "milky"],
@@ -40,17 +41,10 @@
 <div class="bar">
   <NavBar {regions} />
 </div>
-<div class="rod">
-  <NavRod {regions} />
-</div>
+<NavRod {regions} />
 
 <style>
-  @media screen and (min-width: 750px) {
-    .rod {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 1000px) {
     .bar {
       display: none;
     }

@@ -17,10 +17,19 @@
     // show or hide scrollup button wether scrolled up or down or at the top of the page
     const scroll = window.pageYOffset;
 
+    const footer = document.getElementsByClassName("footer").item(0);
+    let footerHeight;
+    if (footer !== null) {
+      footerHeight = footer.clientHeight;
+    } else {
+      footerHeight = 0;
+    }
+    console.log(footerHeight)
+
     if (scroll <= offsetTop) {
       // at the top
       visible = "";
-    } else if (document.documentElement.scrollHeight - document.documentElement.clientHeight - scroll <= offsetBottom) {
+    } else if (document.documentElement.scrollHeight - document.documentElement.clientHeight - footerHeight - scroll <= offsetBottom) {
       // at the bottom
       visible = "up";
     } else if (lastChange - scroll - offsetUp > 0) {
@@ -96,7 +105,7 @@
     fill: black;
   }
   
-  @media screen and (min-width: 1220px) {
+  @media screen and (min-width: 1200px) {
     button.down {
       bottom: calc(-0.3833 * (var(--inner-width) + 3em));
     }
