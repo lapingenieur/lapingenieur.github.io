@@ -1,6 +1,5 @@
 <script lang="ts">
   import Blockon from "$lib/blockons/Blockon.svelte";
-  import Plate from "$lib/blockons/Plate.svelte";
 </script>
 
 <Blockon id="lowlevel">
@@ -17,7 +16,7 @@
 
   <ul>
     <li>
-      <a href="https://github.com/lapingenieur/rsmpeg">Rsmpeg</a> une frêle interface graphique au logiciel
+      <a href="https://github.com/lapingenieur/yfiles/tree/main/rsmpeg">Rsmpeg</a> une frêle interface graphique au logiciel
       <a href="https://ffmpeg.org/">FFmpeg</a> en langage Rust,
       avec la librairie <a href="https://github.com/emilk/egui">egui</a>.
     </li>
@@ -29,7 +28,8 @@
 
     <li>
       <a href="https://fr.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL2</a> est isolé dans un sous-réseau
-      virtuel, on ne peut pas y accéder depuis le réseau local. <a href="https://github.com/lapingenieur/tunnel">Tunnel</a>,
+      virtuel, on ne peut pas y accéder depuis le réseau local.
+      <a href="https://github.com/lapingenieur/yfiles/blob/main/sshtpt.v">sshtpt</a>,
       écrit en langage V, met en place une session <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>
       <a href="https://doc.ubuntu-fr.org/tutoriel/reverse_ssh">renversée</a>
       qui connecte un port local (WSL) au port équivalent exposé sur le réseau local (Windows).

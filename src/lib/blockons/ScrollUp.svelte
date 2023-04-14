@@ -24,7 +24,6 @@
     } else {
       footerHeight = 0;
     }
-    console.log(footerHeight)
 
     if (scroll <= offsetTop) {
       // at the top

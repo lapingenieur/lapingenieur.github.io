@@ -9,6 +9,7 @@
   let menuVisible = false;
 
   let shrunk = false;
+  let hashChanged = false;
   let lastChange = 0;
   const offset = 60; // px
   const offsetPlus = 500; // px
@@ -18,7 +19,11 @@
     // display top bar when at the top of the page, otherwise only button
     // in each case the button will open the rod menu
 
-    if (scrollY <= offset) {
+    if (hashChanged) {
+      // hashchanged
+      shrunk = false;
+      hashChanged = false;
+    } else if (scrollY <= offset) {
       // at top
       topBar = true;
       lastChange = 0;
@@ -36,30 +41,27 @@
         shrunk = false;
         lastChange = scrollY;
       } else if (scrollY - lastChange - offset > 0) {
-        // scrolled down, hide on small devices and shrunk wide devices
+        // scrolled down, hide on small devices and shrink wide devices
         shrunk = true;
         lastChange = scrollY;
       }
     }
     
     // fixes bugs
-    if (!reccursive) timeoutBuffer = setTimeout(() => handleScroll(true), 500);
+    if (innerWidth < 700 && !reccursive) timeoutBuffer = setTimeout(() => handleScroll(true), 500);
   }
 
   function buttonPushed() {
     menuVisible = !menuVisible
 
-    if (innerWidth < 1000) {
+    if (innerWidth < 450) {
       shrunk = false;
       lastChange = scrollY;
     }
   }
 
   function handle_hashchange() {
-    setTimeout(() => {
-      shrunk = false;
-      lastChange = scrollY;
-    }, 50);
+    hashChanged = true;
   }
 </script>
 <svelte:window
@@ -74,12 +76,12 @@
   <div class="menu">
     <div class="menu-container">
       <div class="the-title">
-        <a href="#sommaire" on:click={() => menuVisible = false}>n°500 506</a>
+        <a href="#sommaire" on:click={buttonPushed}>n°500 506</a>
       </div>
       <div class="rod-container">
         <nav class="rod">
           {#each regions as region}
-            <a href="#{region[1]}" on:click={() => menuVisible = false}>{region[0]}</a>
+            <a href="#{region[1]}" on:click={buttonPushed}>{region[0]}</a>
           {/each}
         </nav>
       </div>

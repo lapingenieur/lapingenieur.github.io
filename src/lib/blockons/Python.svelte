@@ -13,7 +13,7 @@
 
   <ul class="first-hand">
     <li>
-      Le compilateur de <a href="#bits-asm">l'assembleur x800</a> est écrit en python.
+      Le <a href="/8bits/compiler.py">compilateur</a> de <a href="#bits-asm">l'assembleur x800</a> est écrit en python.
     </li>
 
     <li>
