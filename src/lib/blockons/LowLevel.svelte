@@ -16,6 +16,17 @@
 
   <ul>
     <li>
+      <a href="https://fr.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL2</a> est isolé dans un sous-réseau
+      virtuel, on ne peut pas y accéder depuis le réseau local.
+      <a href="https://github.com/lapingenieur/yfiles/blob/main/sshtpt.v">sshtpt</a>,
+      écrit en langage V, met en place une session <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>
+      <a href="https://doc.ubuntu-fr.org/tutoriel/reverse_ssh">renversée</a>
+      qui connecte un port local (WSL) au port équivalent exposé sur le réseau local (Windows).
+      Il crée des processus directement avec les interfaces système unix de glibc, ne s'exécute donc
+      pas sous windows.
+    </li>
+
+    <li>
       <a href="https://github.com/lapingenieur/yfiles/tree/main/rsmpeg">Rsmpeg</a> une frêle interface graphique au logiciel
       <a href="https://ffmpeg.org/">FFmpeg</a> en langage Rust,
       avec la librairie <a href="https://github.com/emilk/egui">egui</a>.
@@ -24,15 +35,6 @@
     <li>
       J'ai programmé différents projets sur des cartes <a href="https://www.arduino.cc/">Arduino</a>,
       notamment la gestion automatique de la porte d'un poulailler.
-    </li>
-
-    <li>
-      <a href="https://fr.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL2</a> est isolé dans un sous-réseau
-      virtuel, on ne peut pas y accéder depuis le réseau local.
-      <a href="https://github.com/lapingenieur/yfiles/blob/main/sshtpt.v">sshtpt</a>,
-      écrit en langage V, met en place une session <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>
-      <a href="https://doc.ubuntu-fr.org/tutoriel/reverse_ssh">renversée</a>
-      qui connecte un port local (WSL) au port équivalent exposé sur le réseau local (Windows).
     </li>
   </ul>
 
