@@ -51,6 +51,15 @@
     if (innerWidth < 700 && !reccursive) timeoutBuffer = setTimeout(() => handleScroll(true), 500);
   }
 
+  function buttonSommairePushed() {
+    menuVisible = false
+
+    if (innerWidth < 450) {
+      shrunk = false;
+      lastChange = scrollY;
+    }
+  }
+
   function buttonPushed() {
     menuVisible = !menuVisible
 
@@ -76,7 +85,7 @@
   <div class="menu">
     <div class="menu-container">
       <div class="the-title">
-        <a href="#sommaire" on:click={buttonPushed}>n°500 506</a>
+        <a href="#sommaire" on:click={buttonSommairePushed}>n°500 506</a>
       </div>
       <div class="rod-container">
         <nav class="rod">
