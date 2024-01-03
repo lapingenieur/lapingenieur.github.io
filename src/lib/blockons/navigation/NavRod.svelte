@@ -26,7 +26,7 @@
     } else if (scrollY <= offset) {
       // at top
       topBar = true;
-      lastChange = 0;
+      //lastChange = 0;
       shrunk = false;
     } else {
       topBar = false;
