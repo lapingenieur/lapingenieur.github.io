@@ -3,6 +3,7 @@
   import NavRod from "$lib/blockons/navigation/NavRod.svelte";
 
   const regions: Array<[string, string]> = [         // name -> id
+    ["Présentation", "self"],
     ["Webdev", "webdev"],
     ["8-bits", "bits"],
     ["Bas Niveau", "lowlevel"],
@@ -44,7 +45,7 @@
 <NavRod {regions} />
 
 <style>
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1140px) {
     .bar {
       display: none;
     }

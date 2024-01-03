@@ -6,7 +6,11 @@
   <h1>Sommaire</h1>
 
   <p>
-    Ce site introduit les différents pans de l'informatique que j'ai expérimentés.
+    Bienvenue sur <i>lapingenieur.github.io</i>&nbsp;!
+  </p>
+  <p>
+    Ce site, écrit lors de la campagne parcoursup de 2023,
+    introduit les différents pans de l'informatique que j'ai expérimentés.
   </p>
   <p>
     Le code-source des programmes décrits plus bas est disponible soit sur ce site,
@@ -14,6 +18,7 @@
   </p>
 
   <ul>
+    <li><a href="#self">Présentation</a></li>
     <li><a href="#webdev">Développement Web</a></li>
     <li><a href="#bits">Élaboration d'un ordinateur 8-bits</a></li>
     <li><a href="#lowlevel">Programmation Bas Niveau</a></li>

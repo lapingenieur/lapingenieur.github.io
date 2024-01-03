@@ -1,6 +1,7 @@
 <script lang="ts">
   export let imgsrc: string|null = null;
   export let imgalt: string|null = null;
+  export let title: string|null = null;
   export let minHeight = "6em";
   export let padding = "1em";
   export let rightRatio = "3"; // how much flex-grow to give to plate-right
@@ -14,6 +15,9 @@
   {/if}
 
   <div class="plate-right" style="--rightRatio: {rightRatio}">
+    <div class="plate-top">
+      <img src={imgsrc} alt={imgalt} />
+    </div>
     <slot />
   </div>
 </div>
@@ -32,14 +36,19 @@
     border-radius: 1.5em;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 1em;
   }
   .plate-left {
     flex: 1;
+    margin: 0.5em;
 
     display: none;
+  }
+  .plate-top {
+    padding: 0.5em;
+    max-width: 18em;
   }
   .plate-right {
     /*** value below is defined in html part, according to Plate compenent attributes ***/
@@ -54,18 +63,18 @@
   }
 
   .plate img {
-    height: 7em;
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
-  .plate-right :global(h2.title) {
+  .plate-right :global(h1.title) {
     margin: 0;
     font-weight: lighter;
   }
-  .plate-right > :global(.desc) {
+  .plate-right > :global(p) {
     margin: 0.5em 0 0 0;
     font-size: 1em;
-  }
-  .plate-right > :global(p.desc) {
     text-align: center;
+    width: 100%;
   }
   
   .plate-right :global(:last-child) {
@@ -78,23 +87,25 @@
   @media screen and (min-width: 550px) {
     .plate {
       min-height: 8em;
+      flex-direction: row;
     }
     .plate-left {
       display: flex;
       justify-content: center;
       align-items: center;
     }
+    .plate-top {
+      display: none;
+    }
     .plate-right {
       align-items: flex-start;
     }
-    .plate-right > :global(p.desc) {
-      text-align: left;
+    .plate-right > :global(p) {
+      text-align: justify;
     }
-  
   }
 
   @media screen and (min-width: 960px) {
     .plate { min-height: 6em }
-    .plate img { height: 5em; }
   }
 </style>

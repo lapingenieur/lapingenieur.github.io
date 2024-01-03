@@ -184,7 +184,7 @@
       border-bottom-right-radius: 0;
     }
   }
-  @media screen and (min-width: 450px) and (max-width: 1000px) {
+  @media screen and (min-width: 450px) and (max-width: 1140px) {
     .menu-around .menu {
       border-bottom-right-radius: 0;
     }
@@ -193,7 +193,7 @@
       width: 100vw;
     }
   }
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1140px){
     .menu {
       width: 0;
       height: 0;
@@ -218,7 +218,7 @@
       top: -4.5em;
     }
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1140px) {
     .button-container {
       height: 3.4em;
       width: 3.4em;
@@ -256,20 +256,20 @@
       width: 85%;
     }
   }
-  @media screen and (min-width: 450px) and (max-width: 1000px) {
+  @media screen and (min-width: 450px) and (max-width: 1140px) {
     .menu-around:not(.menuVisible) .menu-button {
       border-bottom-right-radius: 0;
       height: 85%;
       width: 85%;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1140px) {
     .menu-around.menuVisible .menu-button {
       height: 85%;
       width: 85%;
     }
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1140px) {
     .menu-button {
       border-bottom-right-radius: 0;
     }
@@ -283,7 +283,7 @@
     width: 60%;
     height: 60%;
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1140px) {
     .menu-around svg {
       top: 50%;
       left: 50%;
