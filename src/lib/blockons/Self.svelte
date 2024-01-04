@@ -17,7 +17,7 @@
       <h1 class="title">Bonjour&nbsp;!</h1>
       <p class="desc">
         Je suis <span class="emphase">Elio Poletti</span>,
-        étudiant en première année à l'<a href="https://insa-strasbourg.fr">INSA Strasbourg</a>.
+        étudiant en première année à l'<a href="https://www.insa-strasbourg.fr">INSA Strasbourg</a>.
       </p>
     </PlateAlways>
     <Plate
