@@ -18,7 +18,7 @@
     <li>
       <a href="https://fr.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL2</a> est isolé dans un sous-réseau
       virtuel, on ne peut pas y accéder depuis le réseau local.
-      <a href="https://github.com/lapingenieur/yfiles/blob/main/sshtpt.v">sshtpt</a>,
+      <a class="emphase" href="https://github.com/lapingenieur/yfiles/blob/main/sshtpt.v">sshtpt</a>,
       écrit en langage V, met en place une session <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>
       <a href="https://doc.ubuntu-fr.org/tutoriel/reverse_ssh">renversée</a>
       qui connecte un port local (WSL) au port équivalent exposé sur le réseau local (Windows).
@@ -27,7 +27,15 @@
     </li>
 
     <li>
-      <a href="https://github.com/lapingenieur/yfiles/tree/main/rsmpeg">Rsmpeg</a> une frêle interface graphique au logiciel
+      <span class="emphase">Yirena</span> est le projet informatique qui m'a été donné de traiter en langage java
+      lors de mon premier semestre à l'INSA. L'objectif est de générer le code <a href="https://tikz.dev/">tikz</a>
+      qui permet d'afficher le <a href="https://fr.wikipedia.org/wiki/Organigramme_de_programmation">logigramme</a>
+      adaptatif décrivant l'algorithme spécifié en entrée, qui lui-même suit une syntaxe proche du langage
+      <a href="https://fr.wikipedia.org/wiki/Pascal_(langage)">Pascal</a>.
+    </li>
+
+    <li>
+      <a class="emphase" href="https://github.com/lapingenieur/yfiles/tree/main/rsmpeg">Rsmpeg</a> une frêle interface graphique au logiciel
       <a href="https://ffmpeg.org/">FFmpeg</a> en langage Rust,
       avec la librairie <a href="https://github.com/emilk/egui">egui</a>.
     </li>

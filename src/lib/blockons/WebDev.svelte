@@ -5,6 +5,10 @@
 
 <Blockon id="webdev">
   <h1>Développement Web</h1>
+  <p>
+    Le Développement Web, ou <span class="emphase">WebDev</span>, est la branche de l'informatique
+    qui touche à la création et la gestion de sites internet.
+  </p>
 
   <div class="icons">
     <a href="https://svelte.dev">
@@ -36,6 +40,7 @@
   </div>
 
   <hr/>
+
   <p>
     Je manie les technologies modernes nécessaires à la création d'une application web&nbsp;:
   </p>

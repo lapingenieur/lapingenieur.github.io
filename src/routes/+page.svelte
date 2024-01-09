@@ -44,14 +44,6 @@
 </div>
 
 <style>
-  ul {
-    padding: 0;
-    list-style-type: none;
-  }
-  li input {
-    margin: 0 .2em .25em -1.4em;
-  }
-
   .page {
     width: 100%;
     display: flex;
@@ -79,12 +71,14 @@
 
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
-    text-align: center;
     color: #9e9aa2;
   }
   .footer a {
     color: #9e9aa2;
     text-decoration: underline;
+  }
+  .footer p{
+    text-align: center;
   }
 
   @media screen and (min-width: 550px) {

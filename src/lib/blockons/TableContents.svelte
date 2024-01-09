@@ -6,15 +6,17 @@
   <h1>Sommaire</h1>
 
   <p>
-    Bienvenue sur <i>lapingenieur.github.io</i>&nbsp;!
+    Bienvenue sur <span class="emphase">lapingenieur.github.io</span>&nbsp;!
   </p>
   <p>
-    Ce site, écrit lors de la campagne parcoursup de 2023,
+    Ce site, écrit lors de la campagne <span class="emphase">Parcoursup de 2023</span>,
     introduit les différents pans de l'informatique que j'ai expérimentés.
-  </p>
-  <p>
+    <br />
     Le code-source des programmes décrits plus bas est disponible soit sur ce site,
     soit sur mon <a href="https://github.com/lapingenieur">GitHub</a>.
+  </p>
+  <p>
+    Bonne lecture&nbsp;!
   </p>
 
   <ul>
@@ -41,13 +43,13 @@
     width: 100%;
     padding: 0.3em 0;
 
-    color: #535ed6;
     text-decoration: none;
     font-size: 1.5em;
 
-    transition: color 0.18s;
+    text-align: left;
   }
-  a:hover {
-    color: #9198e5;
+
+  a:visited:not(:hover) {
+    color: #535ed6;
   }
 </style>

@@ -38,6 +38,8 @@
   }
   .plate-left {
     flex: 1;
+    aspect-ratio: 1 / 1;
+    height: 5em;
 
     display: none;
   }
@@ -54,7 +56,8 @@
   }
 
   .plate img {
-    height: 7em;
+    max-height: 100%;
+    max-width: 100%;
   }
   .plate-right :global(h2.title) {
     margin: 0;
@@ -88,13 +91,12 @@
       align-items: flex-start;
     }
     .plate-right > :global(p.desc) {
-      text-align: left;
+      text-align: justify;
     }
-  
   }
 
   @media screen and (min-width: 960px) {
     .plate { min-height: 6em }
-    .plate img { height: 5em; }
+    .plate-left { height: 5em; }
   }
 </style>

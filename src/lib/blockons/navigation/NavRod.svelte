@@ -224,7 +224,7 @@
       width: 3.4em;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1220px) {
     .menu-around:not(.shrunk) .button-container,
     .menu-around.menuVisible .button-container {
       height: 5em;
@@ -349,5 +349,11 @@
     transition: color 0.2s;
     text-decoration: none;
     font-size: 2.5em;
+  }
+  @media screen and (max-width: 700px) {
+    .rod a {
+      font-size: 2em;
+      padding: 0 0.5em;
+    }
   }
 </style>

@@ -18,6 +18,20 @@ body {
   margin: 0;
 }
 
+a {
+  color: #535ed6;
+  transition: color 0.18s;
+}
+a:visited {
+  color: #3A4195;
+}
+a:hover {
+  color: #9198e5;
+}
+p, li {
+  text-align: justify;
+}
+
 .block-code {
   font-family: "Roboto Mono", monospace;
   color: var(--hl-white);
@@ -25,6 +39,12 @@ body {
 .inline-code {
   font-family: "Roboto Mono", monospace;
 }
+
+.emphase {
+  font-style: italic;
+  font-weight: bold;
+}
+
 
 code .hl-red { color: var(--hl-red) }
 code .hl-orange { color: var(--hl-orange) }
