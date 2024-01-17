@@ -6,7 +6,8 @@
   let shrunk = false;
   let hashChanged = false;
   let lastChange = 0;
-  const offset = 60; // px
+
+  export let scrollOffset = 60; // px
 
   function handleScroll() {
     // shrink or grow the navbar wether scrolled up or down or at the top of the page
@@ -15,26 +16,22 @@
       // hashchanged
       shrunk = false;
       hashChanged = false;
-    } else if (scrollY <= offset) {
+    } else if (scrollY <= scrollOffset) {
       // at top
       shrunk = false;
-    } else if (lastChange - scrollY - offset > 0) {
+    } else if (lastChange - scrollY - scrollOffset > 0) {
       // scrolled up
       shrunk = false;
       lastChange = scrollY;
-    } else if (scrollY - lastChange - offset > 0) {
+    } else if (scrollY - lastChange - scrollOffset > 0) {
       // scrolled down
       shrunk = true;
       lastChange = scrollY;
     }
   }
-
-  function handle_hashchange() {
-    hashChanged = true
-  }
 </script>
 <svelte:window
-  on:hashchange={handle_hashchange}
+  on:hashchange={() => hashChanged = true}
   on:scroll={handleScroll}
   bind:scrollY={scrollY}
 />

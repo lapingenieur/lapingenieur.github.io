@@ -7,8 +7,6 @@
   import Milky from "$lib/blockons/Milky.svelte";
   import LowLevel from "$lib/blockons/LowLevel.svelte";
   import Self from "$lib/blockons/Self.svelte";
-
-  import Blockon from "$lib/blockons/Blockon.svelte"
 </script>
 
 <div class="page">
